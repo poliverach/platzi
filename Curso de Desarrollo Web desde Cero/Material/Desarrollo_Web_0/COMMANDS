@@ -1,0 +1,1 @@
+"C:\Server\Ruby193\bin\sass" ./scss/weather.scss ./css/weather.css --style=expanded
