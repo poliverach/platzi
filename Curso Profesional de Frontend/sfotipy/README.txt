@@ -25,9 +25,20 @@ Stylus
     - use "nib"
         stylus -u nib -c -o css/ stylus/estilos.styl
 
-  Install css2stylus
+  Install css2stylus (https://www.npmjs.com/package/css2stylus)
   ------------------
     - npm install -g css2stylus
+
+Javascript
+----------
+  Uglify (https://github.com/mishoo/UglifyJS2)
+  ------
+    - npm install -g uglify-js
+
+  Grunt (http://gruntjs.com)
+  -----
+    - npm install -g grunt-cli
+    - npm install -g grunt
 
 Atom
 ----
