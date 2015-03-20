@@ -25,6 +25,10 @@ Stylus
     - use "nib"
         stylus -u nib -c -o css/ stylus/estilos.styl
 
+  Install css2stylus
+  ------------------
+    - npm install -g css2stylus
+
 Atom
 ----
  - Download stylus package
