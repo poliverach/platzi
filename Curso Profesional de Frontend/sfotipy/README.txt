@@ -40,6 +40,10 @@ Javascript
     - npm install -g grunt-cli
     - npm install -g grunt
 
+Fonts
+-----
+  - https://icomoon.io/
+
 Atom
 ----
  - Download stylus package
