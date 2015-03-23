@@ -1,5 +1,5 @@
 @import "nib"
-@import "normalize.styl"
+// @import "normalize.styl"
 @import "fonts.styl"
 
 vendor-prefixes = webkit o ms moz official
@@ -13,7 +13,7 @@ vendor-prefixes = webkit o ms moz official
 
 gris_oscuro = #333333
 gris_claro = #818181
-rojo = #BD255B
+rojo = #CC2F6F
 gris_mas_claro = #F0F0F0
 
 a
@@ -41,7 +41,7 @@ ul
 .action
 	color: white
 	font-size: 1.2em
-	margin-right: .5em
+	margin-right: 1.5em
 	&:last-child
 		margin-right: 0
 	&.gray
@@ -56,6 +56,7 @@ ul
 	border-bottom: 1px solid gris_claro
 .name
 	color: gris_oscuro
+	white-space: nowrap;
 .menu
 	display: none
 .relative
@@ -81,6 +82,7 @@ ul
 		font-size: .8em
 		position: absolute
 		top: -5px
+		color: gris_claro
 	.min
 		left: 0
 	.max
@@ -138,11 +140,12 @@ ul
 		text-align: center
 .song
 	display: inline-block
-	font-size: 1rem
+	font-size: 0.875rem
 	margin-bottom: 1em
 	margin-right: 1em
 	text-align: left
 	width: 8rem
+	overflow: hidden;
 	&:nth-child(even)
 		margin-right: 0
 	p
@@ -184,7 +187,8 @@ ul
 	background: white
 	display: none
 	padding: 1.3em 0
-	overflow: hidden
+	// overflow: hidden
+	clearfix()
 .avatar
 	height: 38px
 	width: 38px
@@ -213,6 +217,13 @@ ul
 	.playing
 		&.medium
 			width: auto
+	.play
+		.action
+			font-size: 2.3125em
+	.item
+		.action
+			font-size: 0.875em;
+			margin-right: 3.3125em
 
 // desktop
 @media screen and (min-width: 1000px)
@@ -241,6 +252,7 @@ ul
 				padding: 1em
 				display: block
 				border-top: 5px solid transparent
+				transition: .3s border-top
 				&:hover
 					border-top: 5px solid gris_claro
 	.music
@@ -256,3 +268,7 @@ ul
 	.logo
 	.playlist
 		display: block
+	.item
+		.action
+			font-size: 0.875em
+			margin-right: .5em
