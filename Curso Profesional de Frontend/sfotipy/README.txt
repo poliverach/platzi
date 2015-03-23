@@ -10,7 +10,7 @@ Stylus
 
   Install "nib" ()
   -------------
-    - npm install nib
+    - npm install nib -g
 
     Docs
     ----
