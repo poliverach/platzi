@@ -15,6 +15,7 @@ gris_oscuro = #333333
 gris_claro = #818181
 rojo = #CC2F6F
 gris_mas_claro = #F0F0F0
+gris_menos_oscuro = #4D4D4D
 
 a
 	text-decoration: none
@@ -54,6 +55,8 @@ ul
 	background: rgba(black, .3)
 .border-bottom
 	border-bottom: 1px solid gris_claro
+.border-top
+	border-top: 1px solid gris_claro
 .name
 	color: gris_oscuro
 	white-space: nowrap;
@@ -229,6 +232,8 @@ ul
 @media screen and (min-width: 1000px)
 	body
 		background: gris_mas_claro
+	.container
+		display: none;
 	.button-menu
 			display: none
 	.playing
@@ -268,6 +273,18 @@ ul
 	.logo
 	.playlist
 		display: block
+	.playlist
+		.name
+			font-size: 1.75em
+			color: gris_oscuro
+			margin-bottom: 0
+			margin-top: 0
+		.author
+			color: gris_claro
+			margin-top: 0em
+		.item
+			.author
+				color: gris_menos_oscuro
 	.item
 		.action
 			font-size: 0.875em
