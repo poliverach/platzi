@@ -28,7 +28,8 @@ Sfotipy.Router = Backbone.Router.extend({
         self.addSongs(name);
       });
 
-    } else {
+    }
+    else {
       this.addSongs(name);
     }
   },
