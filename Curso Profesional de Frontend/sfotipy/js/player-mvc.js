@@ -44,8 +44,8 @@ function View(){
 	this.elems.next = $('#next')
 	this.elems.prev = $('#prev')
 	this.elems.avatar = $('.image img')
-	this.elems.name = $('.playing .name')
-	this.elems.artist = $('.playing .author')
+	this.elems.name = $('.playing .description .name')
+	this.elems.artist = $('.playing .description .author')
 
 	// Delegación del click
 	this.elems.list.on('click', '.song', function(){
