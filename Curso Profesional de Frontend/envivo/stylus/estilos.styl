@@ -1,0 +1,291 @@
+@import "nib"
+// @import "normalize.styl"
+@import "fonts.styl"
+
+vendor-prefixes = webkit o ms moz official
+
+// animacion(parametro)
+// 	-webkit-animation parametro
+// 	-moz-animation parametro
+// 	-o-animation parametro
+// 	-ms-animation parametro
+// 	animation parametro
+
+gris_oscuro = #333333
+gris_claro = #818181
+rojo = #CC2F6F
+gris_mas_claro = #F0F0F0
+gris_menos_oscuro = #4D4D4D
+
+a
+	text-decoration: none
+body
+	font-family: 'Varela Round', sans-serif
+	font-size: 16px
+figure
+	margin: 0
+img
+	vertical-align: top
+ul
+	margin: 0
+	padding: 0
+.button-menu
+	left: .5em
+	color: gris_oscuro
+	margin-top: -10px
+	position: absolute
+	top: 50%
+.container
+	font-size: 0
+	padding: 1.4rem
+	text-align: center
+.action
+	color: white
+	font-size: 1.2em
+	margin-right: 1.5em
+	&:last-child
+		margin-right: 0
+	&.gray
+		color: gris_claro
+.actions
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	background: rgba(black, .3)
+.border-bottom
+	border-bottom: 1px solid gris_claro
+// .border-top
+// 	border-top: 1px solid gris_claro
+.name
+	color: gris_oscuro
+	white-space: nowrap;
+.menu
+	display: none
+.relative
+	position: relative
+.padding
+	padding: 1em
+.padding-tb
+	padding: 1em 0
+.left
+	float: left
+.right
+	float: right
+.wrap
+	width: 1000px
+.round
+	border-radius: 50%
+	overflow: hidden
+.progress
+	margin: 1em 0
+	position: relative
+	.min
+	.max
+		font-size: .8em
+		position: absolute
+		top: -5px
+		color: gris_claro
+	.min
+		left: 0
+	.max
+		right: 0
+	.total
+		background: gris_claro
+		border-radius: 5px
+		height: 5px
+		width: 75%
+		margin: 0 auto
+	.state
+		background: rojo
+		border-radius: 5px
+		height: 5px
+		width: 30%
+		position: relative
+		animation 10s state infinite linear
+	.circle
+		background: gris_oscuro
+		border-radius: 50%
+		height: 10px
+		width: 10px
+		position: absolute
+		right: 0
+		top: -2px
+		animation 1s circle infinite
+
+@keyframes state
+	0%
+		width: 0
+	100%
+		width: 100%
+
+@keyframes circle
+	0%
+		transform: scale(1)
+	100%
+		transform: scale(2)
+		opacity: 0
+
+.author
+	color: gris_claro
+.center-block
+	margin: 0 auto;
+.center-text
+	text-align: center
+.right-text
+	text-align: right
+.header
+	height: 3.5em
+	.title
+		font-size: 1.1em
+		line-height: 3.5em
+		margin: 0
+		text-align: center
+.song
+	display: inline-block
+	font-size: 0.875rem
+	margin-bottom: 1em
+	margin-right: 1em
+	text-align: left
+	width: 8rem
+	overflow: hidden;
+	&:nth-child(even)
+		margin-right: 0
+	p
+		margin: .5em 0
+.playing
+	&.small
+		width: 20em
+		margin: 0 auto
+.input
+	border 1px solid gris_claro
+	border-radius: 5px
+	height: 2.5em
+	padding: 0 1em 0 2em
+.search-icon
+	color: gris_claro
+	position: absolute
+	left: .5em
+	top: .8em
+.close-icon
+	color: gris_claro
+	position: absolute
+	right: .5em
+	top: .5em
+	font-size: 1.2em
+.playlist
+	border-left 1px solid gris_claro
+	display: none
+	padding: 0 2em
+	width: 22em
+	.list
+		list-style: none
+	.item
+		padding: 1em 0
+	.action
+		font-size: .875em
+.isotipo
+	width: 122px
+.logo
+	background: white
+	display: none
+	padding: 1.3em 0
+	// overflow: hidden
+	clearfix()
+.avatar
+	height: 38px
+	width: 38px
+.username
+	color: gris_claro
+	position: relative
+	top: 9px
+	margin-left: .5em
+	&:after
+		border-left 7px solid transparent
+		border-right 7px solid transparent
+		border-top 8px solid gris_claro
+		content: ""
+		display: inline-block
+		margin-left: .4em
+
+// tablet
+@media screen and (min-width: 480px)
+	.song
+		&:nth-child(even)
+			margin-right: 1em
+	.image
+		img
+			height: auto
+			width: 100%
+	.playing
+		&.medium
+			width: auto
+	.play
+		.action
+			font-size: 2.3125em
+	.item
+		.action
+			font-size: 0.875em;
+			margin-right: 3.3125em
+
+// desktop
+@media screen and (min-width: 1000px)
+	body
+		background: gris_mas_claro
+	// .container
+		// display: none;
+	.button-menu
+			display: none
+	.playing
+		padding-top: 1.3em
+		&.large
+			margin: 0 auto
+			width: 62.5em
+			overflow: hidden
+	.menu
+		background: gris_mas_claro
+		display: block
+		overflow: hidden
+		border-top: 1px solid gris_claro
+		.item
+			float: left
+			list-style: none
+			a
+				cursor: pointer
+				color: gris_oscuro
+				text-transform: uppercase
+				padding: 1em
+				display: block
+				border-top: 5px solid transparent
+				transition: .3s border-top
+				&:hover
+					border-top: 5px solid gris_claro
+	.music
+		width: 32.5em
+		float: left
+		.description
+			display: none
+	.header
+		height: auto
+		border: none
+		.title
+			display: none
+	.logo
+	.playlist
+		display: block
+	.playlist
+		.name
+			font-size: 1.75em
+			color: gris_oscuro
+			margin-bottom: 0
+			margin-top: 0
+		.author
+			color: gris_claro
+			margin-top: 0em
+		.item
+			.author
+				color: gris_menos_oscuro
+	.item
+		.action
+			font-size: 0.875em
+			margin-right: .5em
