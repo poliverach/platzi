@@ -1,0 +1,14 @@
+npm
+---
+  - https://www.npmjs.com/
+  - npm install backbone (instalar de manera local)
+  - npm search jquery (busqueda lista de paquetes - cochedb)
+  - npm view jquery (descripcion del package)
+  - npm view jquery version (ultima version)
+  - npm view jquery versions (lista de versiones)
+  - npm install jquery@1.11.0
+  - npm install handlebars@3.1.0
+
+Semantic Version
+----------------
+  - http://semver.org/
