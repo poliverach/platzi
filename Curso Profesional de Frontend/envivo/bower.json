@@ -1,0 +1,27 @@
+{
+  "name": "envivo",
+  "version": "0.0.1",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "mejoranla",
+    "envivo"
+  ],
+  "authors": [
+    "Pedro Olivera <poliverach@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.8.3",
+    "jquery-ui": "1.9.2",
+    "jquery.lazyload": "~1.9.5"
+  }
+}
