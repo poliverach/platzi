@@ -1,6 +1,3 @@
 bower_components
 node_modules
-.buildpath
-.project
-.settings/
 *.log
