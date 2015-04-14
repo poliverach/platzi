@@ -7,7 +7,9 @@ var gulp        = require('gulp'),
     minifyHTML  = require('gulp-minify-html'),
     browserify  = require('gulp-browserify'),
     stylus      = require('gulp-stylus'),
-    gzip        = require('gulp-gzip');
+    gzip        = require('gulp-gzip'),
+    watch       = require('gulp-watch'),
+    plumber     = require('gulp-plumber');
 
 gulp.task('js', function () {
   gulp.src('app/js/main.js')
@@ -68,6 +70,14 @@ gulp.task('compress-styl', function () {
       compress: true
     }))
     .pipe(gulp.dest('./css/build'));
+});
+
+gulp.task('watch-styles', function () {
+  return gulp.src('stylus/*.styl')
+          .pipe(watch('stylus/*.styl'))
+          .pipe(plumber())
+          .pipe(stylus({ compress: true }))
+          .pipe(gulp.dest('./css/build'));
 });
 
 // Gzip
